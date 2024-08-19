@@ -1,4 +1,4 @@
-import pygame, sys, math, colorsys, os
+import pygame, sys, math, colorsys, os, random
 from pygame.locals import *
 
 pygame.init()
@@ -11,9 +11,9 @@ os.environ["SDL_VIDEO_CENTERED"]='1'
 size = (width, height)
 white, black = (200, 200, 200), (0, 0, 0)
 
-sigma = 10
-row = 28
-beta = 8/3
+sigma = 10+0.01*random.randint(-100,100)
+row = 28+0.01*random.randint(-100,100)
+beta = 8/3+0.005*random.randint(-100,100)
 x, y, z = 0.01, 0, 0
 points = []
 colors = []
@@ -103,7 +103,7 @@ while True:
         
         if previous is not None:
             if hue >  0.006:
-                pygame.draw.line(screen, (hsv2rgb(hue, 1, 1)), (x_pos, y_pos), previous, 4 )
+                pygame.draw.line(screen, (hsv2rgb(hue, 1, 1)), (x_pos, y_pos), previous, 4)
 
         previous = (x_pos, y_pos)
         hue += 0.006

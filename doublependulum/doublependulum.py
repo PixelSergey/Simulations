@@ -15,7 +15,7 @@ clock = pygame.time.Clock()
 
 lscale = 1000  # Scale length when drawing from metres to pixels
 mscale = 250   # Scale mass when drawing from kilogrammes to pixel radius
-dampen = 0.998 # Dampening factor
+dampen = 1 # Dampening factor
 
 p0 = (width/2, height/4) # Initial position
 

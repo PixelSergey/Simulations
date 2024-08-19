@@ -74,8 +74,8 @@ def drawinfo():
     pass
 
 # Circular motion
-# bodies.append(Body(1, 1000, 300, 250, 0))
-# bodies.append(Body(10, 1000, 500, 0, 0))
+#bodies.append(Body(1, 1000, 300, 250, 0))
+#bodies.append(Body(10, 1000, 500, 0, 0))
 
 # 3-body
 bodies.append(Body(1, 1000, 300, 0, 0))
